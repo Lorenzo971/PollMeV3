@@ -17,8 +17,11 @@ package com.development.pollme;
 
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.json.jackson2.JacksonFactory;
+import com.google.api.client.util.DateTime;
 import com.development.pollme.checkinendpoint.Checkinendpoint;
 import com.development.pollme.checkinendpoint.model.CheckIn;
+import com.development.pollme.pollendpoint.Pollendpoint;
+import com.development.pollme.pollendpoint.model.Poll;
 import com.development.pollme.DisplayMessageActivity;
 import com.development.pollme.ImageServe;
 import com.development.pollme.PhotoActivity;
@@ -63,9 +66,7 @@ public class MainActivity extends Activity implements OnClickListener{
   protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
 	
-		
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		imageView = (ImageView) findViewById(R.id.imageView1);
@@ -75,6 +76,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		button.setOnClickListener(this);
 
 		new CheckInTask().execute();
+		new PollTask().execute();
 
   }
   
@@ -108,6 +110,7 @@ public class MainActivity extends Activity implements OnClickListener{
      */
     @Override
     protected Void doInBackground(Void... params) {
+    	
       CheckIn checkin = new CheckIn();
       
       // Set the ID of the store where the user is. 
@@ -133,6 +136,45 @@ public class MainActivity extends Activity implements OnClickListener{
       return null;
     }
   }
+  
+  
+  private class PollTask extends AsyncTask<Void, Void, Void> {
+
+	    /**
+	     * Calls appropriate CloudEndpoint to indicate that user checked into a place.
+	     *
+	     * @param params the place where the user is checking in.
+	     */
+	    @Override
+	    protected Void doInBackground(Void... params) {
+	    	
+	      Poll poll = new Poll();
+	      
+	      // Set the ID of the store where the user is. 
+	      // This would be replaced by the actual ID in the final version of the code. 
+	      poll.setCreator("pippo");
+	      poll.setCreationDate(new DateTime(System.currentTimeMillis()));
+	      poll.setTitle("Lorenzo è gay");
+
+	      Pollendpoint.Builder builder = new Pollendpoint.Builder(
+	          AndroidHttp.newCompatibleTransport(), new JacksonFactory(),
+	          null);
+	          
+	      builder = CloudEndpointUtils.updateBuilder(builder);
+
+	      Pollendpoint endpoint = builder.build();
+	      
+
+	      try {
+	        endpoint.insertPoll(poll).execute();
+	      } catch (IOException e) {
+	        // TODO Auto-generated catch block
+	        e.printStackTrace();
+	      }
+
+	      return null;
+	    }
+	  }
   
   
 //Risponde alla pressione di un pulsante sul menù
