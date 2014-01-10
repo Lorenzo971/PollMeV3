@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="src" path="endpoint-libs/libcheckinendpoint-v1/checkinendpoint/checkinendpoint-v1-generated-source"/>
+	<classpathentry kind="src" path="endpoint-libs/libdeviceinfoendpoint-v1/deviceinfoendpoint/deviceinfoendpoint-v1-generated-source"/>
+	<classpathentry kind="src" path="endpoint-libs/libmessageEndpoint-v1/messageEndpoint/messageendpoint-v1-generated-source"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/httpmime-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/android-async-http-1.4.4.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/android-support-v4.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/commons-codec-1.6.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/fluent-hc-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/gcm.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/google-api-client-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/google-api-client-android-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/google-http-client-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/google-http-client-android-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/google-http-client-gson-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/google-http-client-jackson-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/google-http-client-jackson2-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/google-oauth-client-1.16.0-rc.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/gson-2.1.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/httpclient-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/httpclient-cache-4.3.1.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/httpcore-4.3.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/jackson-core-2.1.3.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/jackson-core-asl-1.9.11.jar"/>
+	<classpathentry kind="lib" path="/GoogleTutorial2/libs/jsr305-1.3.9.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

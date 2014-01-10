@@ -1,0 +1,30 @@
+# view AndroidManifest.xml #generated:79
+-keep class com.development.pollme.Display { <init>(...); }
+
+# view AndroidManifest.xml #generated:44
+-keep class com.development.pollme.DisplayMessageActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:59
+-keep class com.development.pollme.GCMIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:87
+-keep class com.development.pollme.ImageServe { <init>(...); }
+
+# view AndroidManifest.xml #generated:34
+-keep class com.development.pollme.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:83
+-keep class com.development.pollme.PhotoActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:49
+-keep class com.development.pollme.PhotoIntentActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:76
+-keep class com.development.pollme.RegisterActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:61
+-keep class com.google.android.gcm.GCMBroadcastReceiver { <init>(...); }
+
+# onClick res/layout/activity_main.xml #generated:20
+-keepclassmembers class * { *** sendMessage(...); }
+
