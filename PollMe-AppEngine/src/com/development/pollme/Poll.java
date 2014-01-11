@@ -4,7 +4,6 @@ import java.util.Date;
 
 import com.google.appengine.api.datastore.Key;
 
-import javax.jdo.annotations.Persistent;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
